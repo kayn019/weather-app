@@ -15,7 +15,7 @@ export default function CurTime({
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTime((prevTime) => new Date(prevTime.getTime() + 1000)); // Add one second to the current time
+      setCurrentTime((prevTime:Date) => new Date(prevTime.getTime() + 1000)); // Add one second to the current time
     }, 1000); // Update every second
 
     return () => clearInterval(interval);
