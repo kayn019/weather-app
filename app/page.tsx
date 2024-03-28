@@ -49,7 +49,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen w-full bg-gray-50 black flex-col items-center justify-start p-5">
-      <div className="">
+      <div className="text-black">
         <CurTime
           weatherData={weatherData}
           currentTime={currentTime}
@@ -61,7 +61,7 @@ export default function Home() {
           handleSetCity={handleSetCity}
         />
       </div>
-      <div>
+      <div className="text-black">
         <CurWeather weatherData={weatherData} />
       </div>
     </main>
