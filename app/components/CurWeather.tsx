@@ -4,8 +4,9 @@ export default function CurWeather({ weatherData }: any) {
   const elements = [1, 2, 3];
 
   return (
-    <div className=" bg-white rounded-2xl p-10 shadow-xl">
+    <div className=" bg-white rounded-2xl p-10 shadow-xl md:max-w-full">
       {weatherData ? (
+        // show current weather data from selected city
         <div className="grid-rows-2 sm:flex justify-between gap-10 ">
           <div className="flex flex-col mr-5 mb-8 sm:mb-0">
             <h2 className="sm:text-3xl md:text-6xl font-extrabold">
@@ -15,7 +16,7 @@ export default function CurWeather({ weatherData }: any) {
               {weatherData.current.last_updated}
             </div>
             <img
-              className="w-3/6 self-center"
+              className="w-2/6 h-auto self-center"
               src={weatherData.current.condition.icon}
               alt=""
             />
@@ -24,6 +25,8 @@ export default function CurWeather({ weatherData }: any) {
             </p>
             <p className="sm:text-sm">{weatherData.current.condition.text}</p>
           </div>
+
+          {/* forecast next 3 days */}
           <div className="flex flex-col justify-evenly sm:gap-1">
             {elements.map((element, index) => (
               <div
@@ -52,7 +55,7 @@ export default function CurWeather({ weatherData }: any) {
           </div>
         </div>
       ) : (
-        <div>no data yet</div>
+        <div className="mt-20">no data yet</div>
       )}
     </div>
   );

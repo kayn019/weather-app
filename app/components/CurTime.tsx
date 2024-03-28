@@ -38,7 +38,7 @@ export default function CurTime({
           Current time in {weatherData.location.name}
         </h2>
       ) : (
-        <h2>Current local time</h2>
+        <h2 className="self-center font-light">Current local time</h2>
       )}
       <p className="self-center mb-2 font-bold">
         {currentTime.toLocaleTimeString()}
