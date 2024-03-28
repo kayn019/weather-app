@@ -10,7 +10,7 @@ export default function Home() {
   const [weatherData, setWeatherData] = useState();
   const [error, setError] = useState(null);
   const [currentTime, setCurrentTime] = useState(new Date());
-  const apiURL = `http://api.weatherapi.com/v1/forecast.json?key=262ac2f2706841da9d595753242603&q=${cityValue}&days=7&aqi=no&alerts=no`;
+  const apiURL = `https://api.weatherapi.com/v1/forecast.json?key=262ac2f2706841da9d595753242603&q=${cityValue}&days=7&aqi=no&alerts=no`;
 
   async function getCity() {
     try {
